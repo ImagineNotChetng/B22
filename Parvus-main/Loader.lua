@@ -16,9 +16,9 @@ getgenv().Parvus = {
     Config = {}
 }
 
-Parvus.Utilities.UI = Parvus.Debug and loadfile("Parvus/Utilities/UI.lua")() or loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AlexR32/Parvus/main/Utilities/UI.lua"))()
-Parvus.Utilities.Config = Parvus.Debug and loadfile("Parvus/Utilities/Config.lua")() or loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AlexR32/Parvus/main/Utilities/Config.lua"))()
-Parvus.Utilities.Drawing = Parvus.Debug and loadfile("Parvus/Utilities/Drawing.lua")() or loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AlexR32/Parvus/main/Utilities/Drawing.lua"))()
+Parvus.Utilities.UI = Parvus.Debug and loadfile("Parvus/Utilities/UI.lua")() or loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ImagineNotChetng/B22/main/Parvus-main/Utilities/UI.lua"))()
+Parvus.Utilities.Config = Parvus.Debug and loadfile("Parvus/Utilities/Config.lua")() or loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ImagineNotChetng/B22/main/Parvus-main/Utilities/Config.lua"))()
+Parvus.Utilities.Drawing = Parvus.Debug and loadfile("Parvus/Utilities/Drawing.lua")() or loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ImagineNotChetng/B22/main/Parvus-main/Utilities/Drawing.lua"))()
 
 Parvus.Utilities.SetupFPS = function()
     local LastIteration
@@ -48,25 +48,8 @@ end
 Parvus.Games = {
     ["1054526971"] = {
         Name = "Blackhawk Rescue Mission 5",
-        Script = Parvus.Debug and readfile("Parvus/Games/BRM5.lua") or game:HttpGetAsync("https://raw.githubusercontent.com/AlexR32/Parvus/main/Games/BRM5.lua")
+        Script = Parvus.Debug and readfile("Parvus/Games/BRM5.lua") or game:HttpGetAsync("https://raw.githubusercontent.com/ImagineNotChetng/B22/main/Parvus-main/Games/BRM5.lua")
     },
-    ["580765040"] = {
-        Name = "RAGDOLL UNIVERSE",
-        Script = Parvus.Debug and readfile("Parvus/Games/RU.lua") or game:HttpGetAsync("https://raw.githubusercontent.com/AlexR32/Parvus/main/Games/RU.lua")
-    },
-    ["1168263273"] = {
-        Name = "Bad Business",
-        Script = Parvus.Debug and readfile("Parvus/Games/BB.lua") or game:HttpGetAsync("https://raw.githubusercontent.com/AlexR32/Parvus/main/Games/BB.lua")
-    },
-    --[[
-    ["807930589"] = {
-        Name = "The Wild West",
-        Script = readfile("Parvus/Games/TWW.lua")--Parvus.Debug and readfile("Parvus/Games/TWW.lua") or game:HttpGetAsync("https://raw.githubusercontent.com/AlexR32/Parvus/main/Games/TWW.lua")
-    },
-    ["2194874153"] = {
-        Name = "Those Who Remain",
-        Script = readfile("Parvus/Games/TWR.lua")--Parvus.Debug and readfile("Parvus/Games/TWR.lua") or game:HttpGetAsync("https://raw.githubusercontent.com/AlexR32/Parvus/main/Games/TWR.lua")
-    }]]
 }
 
 local PlayerService = game:GetService("Players")
@@ -82,7 +65,7 @@ end
 LocalPlayer.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
         local QueueOnTeleport = (syn and syn.queue_on_teleport) or queue_on_teleport
-        QueueOnTeleport(Parvus.Debug and readfile("Parvus/Loader.lua") or game:HttpGetAsync("https://raw.githubusercontent.com/AlexR32/Parvus/main/Loader.lua"))
+        QueueOnTeleport(Parvus.Debug and readfile("Parvus/Loader.lua") or game:HttpGetAsync("https://raw.githubusercontent.com/ImagineNotChetng/B22/main/Parvus-main/Loader.lua"))
     end
 end)
 
@@ -98,7 +81,7 @@ if SupportedGame then
     Parvus.Loaded = true
 else
     Parvus.Current = "Universal"
-    loadstring(Parvus.Debug and readfile("Parvus/Universal.lua") or game:HttpGetAsync("https://raw.githubusercontent.com/AlexR32/Parvus/main/Universal.lua"))()
+    loadstring(Parvus.Debug and readfile("Parvus/Universal.lua") or game:HttpGetAsync("https://raw.githubusercontent.com/ImagineNotChetng/B22/main/Parvus-main/Universal.lua"))()
     Parvus.Utilities.UI:Notification({
         Title = "Parvus Hub",
         Description = Parvus.Current .. " loaded!",
