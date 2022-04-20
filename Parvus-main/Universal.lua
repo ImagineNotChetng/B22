@@ -153,7 +153,7 @@ Color = Parvus.Utilities.Config:TableToColor(Parvus.Config.UI.Color),Position = 
             AimbotSection:Slider({Name = "Smoothness",Min = 0,Max = 100,Value = Parvus.Config.AimAssist.Aimbot.Sensitivity * 100,Unit = "%",Callback = function(Number)
                 Parvus.Config.AimAssist.Aimbot.Sensitivity = Number / 100
             end})
-            AimbotSection:Slider({Name = "Field of View",Min = 0,Max = 500,Value = Parvus.Config.AimAssist.Aimbot.FieldOfView,Callback = function(Number)
+            AimbotSection:Slider({Name = "Field of View",Min = 0,Max = 5000,Value = Parvus.Config.AimAssist.Aimbot.FieldOfView,Callback = function(Number)
                 Parvus.Config.AimAssist.Aimbot.FieldOfView = Number
             end})
             AimbotSection:Dropdown({Name = "Priority",Default = Parvus.Config.AimAssist.Aimbot.Priority,List = {
@@ -204,7 +204,7 @@ Color = Parvus.Utilities.Config:TableToColor(Parvus.Config.UI.Color),Position = 
             SilentAimSection:Slider({Name = "Hit Chance",Min = 0,Max = 100,Value = Parvus.Config.AimAssist.SilentAim.HitChance,Unit = "%",Callback = function(Number)
                 Parvus.Config.AimAssist.SilentAim.HitChance = Number
             end})
-            SilentAimSection:Slider({Name = "Field of View",Min = 0,Max = 500,Value = Parvus.Config.AimAssist.SilentAim.FieldOfView,Callback = function(Number)
+            SilentAimSection:Slider({Name = "Field of View",Min = 0,Max = 5000,Value = Parvus.Config.AimAssist.SilentAim.FieldOfView,Callback = function(Number)
                 Parvus.Config.AimAssist.SilentAim.FieldOfView = Number
             end})
             SilentAimSection:Dropdown({Name = "Priority",Default = Parvus.Config.AimAssist.SilentAim.Priority,List = {
